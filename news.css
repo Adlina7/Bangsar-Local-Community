@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+   background-color:  #546E8D;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo img{
+    float: left;
+    width: 135px;
+    height: auto;  
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 17px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    background: #E4A96F;
+    color: black;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: transparent;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.container{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.blog-section .title{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 120px;
+}
+
+.blog-section .title h2{
+    font-size: 40px;
+    color: #E4A96F;
+    text-transform: uppercase;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+    padding-top: 20px; /* Optional padding to adjust the gap at the top */
+    padding-bottom: 100px;
+    background-color: #546E8D;
+}
+
+.cards .card{
+    width: 100%;
+    position: relative;
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    padding: 15px 20px;
+}
+
+.content h4{
+    font-size: 24px;
+    color: #0b403a;
+    font-weight: 500;
+}
+
+.content p{
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.content a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 12px;
+    display: inline-block;
+    background-color: #3A706A;
+    padding: 8px 15px;
+}
+
+/* Your existing styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Style for the footer content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the footer links */
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-links li {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #A2A092;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header .navbar ul li{
+       width: 100%; 
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #D1D0CB;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}

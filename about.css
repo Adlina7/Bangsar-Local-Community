@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background-color:  #546E8D;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo img{
+    float: left;
+    width: 135px;
+    height: auto;  
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 17px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    background: #E4A96F;
+    color: black;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: transparent;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    background-color: #272D37;
+    margin-bottom: 30px; /* Adjust this value to reduce the gap */
+    color: #E4A96F;
+    text-align: center;
+    padding: 120px;
+}
+
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.image{
+    flex: 1;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image img{
+    width: 100%;
+   transition: transform 0.3s ease;
+}
+
+.image:hover img{
+    transform: scale(1.1);
+}
+
+.content{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content p{
+    font-size: 17px;
+    line-height: 1.6;
+    color: antiquewhite;
+}
+
+.readmore{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3A706A;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.readmore:hover{
+    background-color: #CCBB25;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for the footer content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the footer links */
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-links li {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px){
+    .about-content{
+        flex-direction: column;
+    }
+    .image, .content{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 38px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #A2A092;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header .navbar ul li{
+       width: 100%; 
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #D1D0CB;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #546E8D;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo img{
+    float: left;
+    width: 135px;
+    height: auto;  
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 17px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    background: #E4A96F;
+    color: black;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: transparent;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.text {
+    background-color: #333;
+    color: #E4A96F;
+    text-align: center;
+    padding: 120px;
+}
+
+/* Style for the 'Home' section */
+#home {
+    padding: 20px;
+    margin: 20px;
+}
+
+#home h2 {
+    color: #fff;
+}
+
+.event {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.event h3 {
+    color: #007bff;
+}
+
+.event p {
+    color: #666;
+}
+
+/* Additional styling for multiple events */
+.event + .event {
+    margin-top: 20px;
+}
+
+.event a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 12px;
+    display: inline-block;
+    background-color: #3A706A;
+    padding: 8px 15px;
+}
+
+img{
+    max-width: 300px; /* Set the maximum width as per your requirement */
+    max-height: 200px; /* Set the maximum height as per your requirement */
+    width: auto; /* Ensures the width adjusts according to the aspect ratio */
+    height: auto;  
+}
+
+
+
+/* Style for the 'Contact' section */
+#contact {
+    background-color: #e5e5e5;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#contact h2 {
+    color: #333;
+}
+
+#contact p {
+    color: #666;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for the footer content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the footer links */
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-links li {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .text {
+        padding: 40px;
+    }
+
+    #home,
+    .event,
+    #contact {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    button {
+        padding: 8px 10px;
+    }
+}
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #A2A092;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header .navbar ul li{
+       width: 100%; 
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #D1D0CB;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
